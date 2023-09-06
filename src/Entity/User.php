@@ -34,8 +34,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 20)]
     private ?string $pseudo = null;
 
-    #[ORM\Column(length: 60)]
-    private ?string $mdp = null;
+    // #[ORM\Column(length: 60)]
+    // private ?string $mdp = null;
 
     #[ORM\Column(length: 20)]
     private ?string $nom = null;
@@ -134,17 +134,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getMdp(): ?string
-    {
-        return $this->mdp;
-    }
+    // public function getMdp(): ?string
+    // {
+    //     return $this->mdp;
+    // }
 
-    public function setMdp(string $mdp): static
-    {
-        $this->mdp = $mdp;
+    // public function setMdp(string $mdp): static
+    // {
+    //     $this->mdp = $mdp;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     public function getNom(): ?string
     {

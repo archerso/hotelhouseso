@@ -22,7 +22,9 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">ACCUEIL
+        {# creation du lien vers la page accueil #}
+          <a class="nav-link active" href="{{ path('home')}}">ACCUEIL
+          {# <a class="nav-link active" href="#">ACCUEIL #}
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
@@ -40,15 +42,27 @@
         {# <li class="nav-item">
           <a class="nav-link" href="#">NOS 3 GAMMES DE CHAMBRES 4 *</a>
         </li> #}
+{# exemple pour un lien avec la route #}
 
-  <button type="button" class="btn btn-success">Connexion</button>
-  <button type="button" class="btn btn-light">Deconnexion</button>
-        <li class="nav-item">
-          <a class="nav-link" href="#">CONNEXION</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">DECONNEXION</a>
-        </li>
+  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">CONNEXION</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" type="submit" class=" btn btn-success text-danger" href="{{ path('app_login') }}">CONNEXION</a>
+            <a class="dropdown-item" type="submit" class=" btn btn-success text-danger" href="{{ path('app_logout') }}">DECONNEXION</a>
+         
+           </div>
+        </li> 
+     {# <a href="{{ path('app_login') }}" type="submit" class=" btn btn-success text-danger">CONNEXION</a>
+     <a href="{{ path('app_logout') }}" type="submit" class="btn btn-light text-danger">DECONNEXION</a> #}
+  {# <button type="submit" class="btn btn-success">Connexion</button> 
+  <button type="submit" class="btn btn-light">Deconnexion</button> #}
+ 
+  {# {% if app.user %} #}
+        {# <a href="{{ path('app_logout') }}" class="btn btn-outline-danger">Déconnexion</a> #}
+      {# {% else %} #}
+        <a href="{{ path('app_information') }}" class="btn btn-outline-info me-3">INSCRIPTION</a>
+        {# <a href="{{ path('app_login') }}" class="btn btn-outline-light">Connexion</a> #}
+      {# {% endif %} #}
         <li class="nav-item">
           <a class="nav-link" href="#">NOTRE RESTAURANT GASTRONOMIQUE</a>
         </li>
@@ -64,7 +78,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#">A PROPOS DE NOTRE HOTEL 4*</a>
         </li>
-        <li class="nav-item dropdown">
+        {# <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">GESTION DU BACKOFFICE</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">GESTION DES CHAMBRES</a>
@@ -73,13 +87,10 @@
             <a class="dropdown-item" href="#">GESTION DE LA CARTE DU SPA</a>
             {# <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Separated link</a> #}
-          </div>
-        </li>
+          {# </div>
+        </li>  #}
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-sm-2" type="search" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
+    
     </div>
   </div>
 </nav>

@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+class ChambreController extends AbstractController
+{
+    #[Route('/chambre', name: 'app_chambre')]
+    public function index(): Response
+    {
+        return $this->render('chambre/index.html.twig', [
+            'controller_name' => 'ChambreController',
+        ]);
+    }
+// creation de la route home=accueil
+    #[Route('/', name: 'home')]
+    public function home(): Response
+    {
+        return $this->render('chambre/index.html.twig');
+    }
+    
+    // creation de la route du formulaire pour les chambres
+    #[Route('/jegere', name: 'app_formchambre')]
+    public function form(): Response
+    {
+        return $this->render('chambre/formchambre.html.twig');
+    }
+
+
+}
