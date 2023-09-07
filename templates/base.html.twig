@@ -21,6 +21,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
+      <li class="nav-item" >
+        <a href="{{ path('app_jegere')}}" class="nav-link " >BACKOFFICE</a>
+       
+      </li>
         <li class="nav-item">
         {# creation du lien vers la page accueil #}
           <a class="nav-link active" href="{{ path('home')}}">ACCUEIL
@@ -31,10 +35,17 @@
            <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">NOS 3 GAMMES DE CHAMBRES</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">CLASSIQUE</a>
+            <a class="dropdown-item" href=" #">CLASSIQUE</a>
             <a class="dropdown-item" href="#">CONFORT</a>
             <a class="dropdown-item" href="#">SUITE</a>
-           
+             {# <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">CONNEXION</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" type="submit" class=" btn btn-success text-danger" href="{{ path('app_login') }}">CONNEXION</a>
+            <a class="dropdown-item" type="submit" class=" btn btn-success text-danger" href="{{ path('app_logout') }}">DECONNEXION</a>
+         
+           </div>
+        </li> 
             {# <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Separated link</a> #}
           </div>
@@ -44,14 +55,7 @@
         </li> #}
 {# exemple pour un lien avec la route #}
 
-  <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">CONNEXION</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" type="submit" class=" btn btn-success text-danger" href="{{ path('app_login') }}">CONNEXION</a>
-            <a class="dropdown-item" type="submit" class=" btn btn-success text-danger" href="{{ path('app_logout') }}">DECONNEXION</a>
-         
-           </div>
-        </li> 
+ 
      {# <a href="{{ path('app_login') }}" type="submit" class=" btn btn-success text-danger">CONNEXION</a>
      <a href="{{ path('app_logout') }}" type="submit" class="btn btn-light text-danger">DECONNEXION</a> #}
   {# <button type="submit" class="btn btn-success">Connexion</button> 
@@ -60,7 +64,7 @@
   {# {% if app.user %} #}
         {# <a href="{{ path('app_logout') }}" class="btn btn-outline-danger">Déconnexion</a> #}
       {# {% else %} #}
-        <a href="{{ path('app_information') }}" class="btn btn-outline-info me-3">INSCRIPTION</a>
+        {# <a href="{{ path('app_information') }}" class="btn btn-outline-info me-3">INSCRIPTION</a> #}
         {# <a href="{{ path('app_login') }}" class="btn btn-outline-light">Connexion</a> #}
       {# {% endif %} #}
         <li class="nav-item">

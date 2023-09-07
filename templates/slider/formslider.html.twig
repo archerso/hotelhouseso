@@ -1,9 +1,19 @@
-{% extends 'base.html.twig' %}
+{# 
+  $builder
+            ->add('titre')
+            ->add('description_courte')
+            ->add('description_longue')
+            ->add('photo')
+            ->add('prix_journalier')
+            ->add('date_enregistrement')
+ #}
 
-{% block title %}formulaire chambre{% endblock %}
+ {% extends 'base.html.twig' %}
+
+{% block title %}formulaire slider{% endblock %}
 
 {% block body %}
-    <h1>formulaire 3 GAMMES DE CHAMBRES</h1>
+    <h1>formulaire slider</h1>
 {# propriete formulaire
   $builder
             ->add('titre')
@@ -35,17 +45,17 @@
  #}
  
 
-  <h1 class="text-center my-4">Ajout Chambre</h1>
+  <h1 class="text-center my-4">Ajout slider</h1>
     <div class="container">
-        {{ form_start(formChambre)}}
-            {{ form_row(formChambre.description_longue)}}
-            {{ form_row(formChambre.description_courte)}}
-            {{ form_row(formChambre.photo)}}
-            {{ form_row(formChambre.prix_journalier)}}
-            {{ form_row(formChambre.date_enregistrement)}}
+        {{ form_start(formslider)}}
+        
+            {{ form_row(formslider.photo)}}
+            {{ form_row(formslider.ordre)}}
+           
+            {{ form_row(formslider.date_enregistrement)}}
             
             <button class="btn btn-primary">Ajouter</button>
-        {{ form_end(formChambre)}}
+        {{ form_end(formslider)}}
     </div>
     {# <p>toto</p> #}
 
