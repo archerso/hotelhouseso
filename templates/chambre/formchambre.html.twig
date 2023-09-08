@@ -30,14 +30,26 @@
             <button class="btn btn-primary">Ajouter</button>
         {{ form_end(formVoiture)}}
     </div>
-    <p>toto</p>
+    
 {% endblock %}
  #}
  
 
-  <h1 class="text-center my-4">Ajout Chambre</h1>
+  <h1 class="text-center my-4">
+  {% if editMode %}
+  Modification de le chambre
+  {% else %}
+    Création de la chambre
+  {% endif %}
+  </h1>
+  
+
     <div class="container">
-        {{ form_start(formChambre)}}
+        {{ form_start(formChambre , {
+                attr:{
+                    novalidate: 'novalidate',
+                }
+        })}}
             {{ form_row(formChambre.description_longue)}}
             {{ form_row(formChambre.description_courte)}}
             {{ form_row(formChambre.photo)}}
@@ -47,6 +59,5 @@
             <button class="btn btn-primary">Ajouter</button>
         {{ form_end(formChambre)}}
     </div>
-    {# <p>toto</p> #}
 
 {% endblock %}

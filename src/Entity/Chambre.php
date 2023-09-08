@@ -5,7 +5,7 @@ namespace App\Entity;
 use App\Repository\ChambreRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 #[ORM\Entity(repositoryClass: ChambreRepository::class)]
 class Chambre
 {
@@ -14,21 +14,22 @@ class Chambre
     #[ORM\Column]
     private ?int $id = null;
 
+    #[Assert\NotBlank(message: 'Ce champs ne peut pas être vide')]
     #[ORM\Column(length: 255)]
     private ?string $titre = null;
-
+    #[Assert\NotBlank(message: 'Ce champs ne peut pas être vide')]
     #[ORM\Column(length: 255)]
     private ?string $description_courte = null;
-
+    #[Assert\NotBlank(message: 'Ce champs ne peut pas être vide')]
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description_longue = null;
-
+    #[Assert\NotBlank(message: 'Ce champs ne peut pas être vide')]
     #[ORM\Column(length: 255)]
     private ?string $photo = null;
-
+    #[Assert\NotBlank(message: 'Ce champs ne peut pas être vide')]
     #[ORM\Column]
     private ?int $prix_journalier = null;
-
+    #[Assert\NotBlank(message: 'Ce champs ne peut pas être vide')]
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $date_enregistrement = null;
 

@@ -11,43 +11,45 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+
 class ChambreController extends AbstractController
 {
-    #[Route('/chambre', name: 'app_chambre')]
-    public function index(): Response
+    #[Route('/jegere/gestion/chambre', name: 'app_gestion_chambre')]
+    public function index(ChambreRepository $repo): Response
     {
-        return $this->render('chambre/index.html.twig', [
-            'controller_name' => 'ChambreController',
+        $chambres = $repo->findAll();
+        // c'est juste pour l'arborescence n'influt pour la securité
+        return $this->render('admin/gestion.html.twig', [
+            'chambres' => $chambres,
         ]);
     }
-// creation de la route home=accueil
-    #[Route('/', name: 'home')]
-    public function home(): Response
-    {
-        return $this->render('chambre/index.html.twig');
-    }
-    
-    // creation de la route du formulaire pour les chambres
-    #[Route('/jegere/form/chambre', name: 'app_formchambre')]
+
+// creation de la route du formulaire pour les chambres
+#[Route('/', name: 'home')]
+    // #[Route('/jegere/form/chambre', name: 'app_formchambre')]
     public function form(ChambreRepository $repo): Response
     {
       
       // ! formulaire chambre
           
-              $chambre = $repo->findAll();
+              $chambres = $repo->findAll();
               return $this->render('chambre/index.html.twig', [
-                  'chambre' => $chambre,
+                  'chambres' => $chambres,
               ]);
           
     }
     // creation de la fonction ajout du formulair e chambre
           #[Route('/jegere/form/chambre/ajout', name:'chambre_ajout')]
-           public function ajout(Request $request, EntityManagerInterface $manager) 
-
-          {
-              $chambre = new Chambre;
+          #[Route('/jegere/form/chambre/modif/{id}', name:'chambre_modif')]
+           public function ajout(Request $request, EntityManagerInterface $manager, Chambre $chambre = null) 
+             {
+                if(!$chambre)
+                {
+                    $chambre = new Chambre;
+                    
+                }
+                $form = $this->createForm(ChambreType::class, $chambre);
               // * je crée une variable dans laquel je stock mon formulaire créée grace a createForm() et a son formBuilder (ChambreType)
-              $form = $this->createForm(ChambreType::class, $chambre);
               $form->handleRequest($request);
               if($form->isSubmitted() && $form->isValid())
               {
@@ -55,11 +57,15 @@ class ChambreController extends AbstractController
                   $manager->persist($chambre);
                   //* flush() execute toute les requêtes 
                   $manager->flush();
-                  return $this->redirectToRoute('app_formchambre');
+            //    aprés que l'admin ai rempli le form de la chambre il est redirigé vers home
+                  return $this->redirectToRoute('home');
               }
       
               return $this->render('chambre/formchambre.html.twig', [
                   'formChambre' => $form,
+                //   si nous somme sur la route/ new : editMode = 0
+                // sinon editMode = 1
+                  'editMode' => $chambre->getId() !== null,
               ]);
           }
 
@@ -69,11 +75,20 @@ class ChambreController extends AbstractController
     public function show(ChambreRepository $repo): Response
     {
           
-              $chambre = $repo->findAll();
+              $chambres = $repo->findAll();
               return $this->render('chambre/index.html.twig', [
-                  'chambre' => $chambre,
+                  'chambres' => $chambres,
               ]);
           
     }
+    #[Route('/chambre/delete/{id}', name: 'app_chambre_delete')]
+    
+        public function delete(EntityManagerInterface $manager, Chambre $chambre)
+        {
+            $manager->remove($chambre); 
+            $manager->flush();
+            return $this->redirectToRoute('app_gestion_chambre');
+        }
+    
 
 }
