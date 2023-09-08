@@ -1,0 +1,19 @@
+    Carte Brasserie du Midi :
+        Cette carte met l'accent sur une cuisine décontractée et rapide pour le déjeuner.
+        Options variées de plats chauds et froids, tels que des salades, des sandwiches, des quiches, et des plats du jour.
+        Menu adapté aux personnes recherchant un repas rapide et copieux en milieu de journée.
+        Sélection de boissons, y compris des boissons non alcoolisées et des boissons alcoolisées légères.
+
+    Carte Dégustation de l'Après-Midi :
+        Une carte spéciale pour ceux qui souhaitent profiter d'une expérience gastronomique en après-midi.
+        Offre une sélection de plats légers et créatifs, parfaits pour les amateurs de cuisine fine.
+        Inclut souvent des options telles que des plateaux de fromages, des petits plats, des desserts raffinés et une variété de thés ou de cafés spéciaux.
+        Idéal pour une pause gourmande et relaxante pendant l'après-midi.
+
+    Carte Restaurant du Soir :
+        La carte phare du restaurant pour les dîners élégants et mémorables.
+        Propose une gamme diversifiée de plats sophistiqués, y compris des entrées, des plats principaux et des desserts gastronomiques.
+        Souvent accompagnée d'une sélection de vins de qualité pour accompagner chaque plat.
+        Ambiance et service conçus pour créer une expérience culinaire haut de gamme en soirée.
+
+Chacune de ces cartes offre une expérience culinaire unique adaptée à différents moments de la journée et aux préférences des clients.

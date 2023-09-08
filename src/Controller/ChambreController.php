@@ -36,10 +36,9 @@ class ChambreController extends AbstractController
           
               $chambre = $repo->findAll();
               return $this->render('chambre/index.html.twig', [
-                  'items' => $chambre,
+                  'chambre' => $chambre,
               ]);
           
-      
     }
     // creation de la fonction ajout du formulair e chambre
           #[Route('/jegere/form/chambre/ajout', name:'chambre_ajout')]
@@ -49,9 +48,7 @@ class ChambreController extends AbstractController
               $chambre = new Chambre;
               // * je crée une variable dans laquel je stock mon formulaire créée grace a createForm() et a son formBuilder (ChambreType)
               $form = $this->createForm(ChambreType::class, $chambre);
-      
               $form->handleRequest($request);
-      
               if($form->isSubmitted() && $form->isValid())
               {
                   //* persist() préparer les requetes SQL par rapport a l'objet qu'on lui donne en paramètre
@@ -65,4 +62,18 @@ class ChambreController extends AbstractController
                   'formChambre' => $form,
               ]);
           }
+
+        //creation de la methode pour affichage des chambres 
+          
+    #[Route('/chambre/show', name: 'app_showchambre')]
+    public function show(ChambreRepository $repo): Response
+    {
+          
+              $chambre = $repo->findAll();
+              return $this->render('chambre/index.html.twig', [
+                  'chambre' => $chambre,
+              ]);
+          
+    }
+
 }

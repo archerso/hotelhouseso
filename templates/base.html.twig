@@ -32,30 +32,16 @@
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
-           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">NOS 3 GAMMES DE CHAMBRES</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href=" #">CLASSIQUE</a>
-            <a class="dropdown-item" href="#">CONFORT</a>
-            <a class="dropdown-item" href="#">SUITE</a>
-             {# <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">CONNEXION</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" type="submit" class=" btn btn-success text-danger" href="{{ path('app_login') }}">CONNEXION</a>
-            <a class="dropdown-item" type="submit" class=" btn btn-success text-danger" href="{{ path('app_logout') }}">DECONNEXION</a>
-         
-           </div>
-        </li> 
-            {# <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a> #}
-          </div>
-        </li>
-        {# <li class="nav-item">
-          <a class="nav-link" href="#">NOS 3 GAMMES DE CHAMBRES 4 *</a>
-        </li> #}
+           {# <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">NOS 3 GAMMES DE CHAMBRES</a>
+          <div class="dropdown-menu"> #}
+          {# code ok chambre #}
+          <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_showchambre')}}">NOTRE GAMME DE CHAMBRE</a>
+          </li>
+        
 {# exemple pour un lien avec la route #}
 
- 
      {# <a href="{{ path('app_login') }}" type="submit" class=" btn btn-success text-danger">CONNEXION</a>
      <a href="{{ path('app_logout') }}" type="submit" class="btn btn-light text-danger">DECONNEXION</a> #}
   {# <button type="submit" class="btn btn-success">Connexion</button> 
@@ -74,7 +60,7 @@
           <a class="nav-link" href="#">NOTRE SPA </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">LAISSER VOTRE AVIS</a>
+          <a class="nav-link" href="{{ path('avis_ajout') }}">LAISSER VOTRE AVIS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">RESERVATIONS</a>

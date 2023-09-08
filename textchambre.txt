@@ -1,0 +1,21 @@
+Voici un résumé des trois principales gammes de chambres que l'on peut trouver dans de nombreux établissements hôteliers : classique, confort et suite.
+
+    Chambre Classique :
+        La chambre classique est généralement la catégorie d'entrée de gamme dans un hôtel.
+        Elle offre des équipements de base tels qu'un lit, une salle de bains privative et un espace de rangement.
+        La décoration peut être simple et fonctionnelle, mais elle est généralement propre et confortable.
+        Les chambres classiques conviennent aux voyageurs soucieux de leur budget ou à ceux qui passent peu de temps dans leur chambre.
+
+    Chambre Confort :
+        Les chambres confort sont une catégorie intermédiaire offrant un niveau de confort supérieur à celui des chambres classiques.
+        Elles sont généralement plus spacieuses et disposent d'équipements supplémentaires tels qu'une télévision à écran plat, un minibar et un espace de travail.
+        La décoration est souvent plus soignée et contemporaine, offrant une atmosphère plus agréable.
+        Les chambres confort conviennent aux voyageurs recherchant un certain niveau de confort sans nécessairement opter pour une suite de luxe.
+
+    Suite :
+        Les suites sont les chambres les plus luxueuses et spacieuses d'un hôtel.
+        Elles comprennent généralement une chambre séparée, un salon, une salle de bains spacieuse et parfois même une cuisine ou un coin repas.
+        Les suites sont décorées avec élégance et souvent équipées de commodités haut de gamme telles que des peignoirs, des jacuzzis privés et des vues panoramiques.
+        Elles conviennent aux voyageurs qui recherchent une expérience de séjour haut de gamme, que ce soit pour une occasion spéciale ou pour un confort exceptionnel lors d'un voyage d'affaires.
+
+En résumé, le choix entre une chambre classique, confort ou suite dépend de votre budget, de vos préférences en matière de confort et de vos besoins spécifiques lors de votre séjour à l'hôtel. Chacune de ces catégories offre une expérience différente pour répondre aux attentes des voyageurs.
